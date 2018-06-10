@@ -1,0 +1,48 @@
+<script src="http://how2j.cn/study/jquery.min.js"></script>
+
+<div id="checkResult">11111</div>
+
+<!--输入账号 :<input id="name" type="text">-->
+
+<script type="text/javascript">
+    // $(document).ready(function(){
+    //     ajaxRequest();
+    // });
+    // function ajaxRequest(){
+    //     $.ajax({
+    //         url:"http://localhost:8001/hello/ajax",
+    //         type:"POST",
+    //         dataType:"json",
+    //         data:{
+    //             "a":1,
+    //             "b":2,
+    //             "c":3
+    //         },
+    //         async:false,
+    //         success:function(data){
+    //             alert("success");
+    //             $.each(data,function(index,element)){
+    //                 alert(element.a);
+    //                 alert(element.b);
+    //                 alert(element.c)
+    //             };
+    //         },
+    //         error:function(){
+    //             alert("error");
+    //         }
+    //     });
+    // }
+    $(function(){
+       // $("#name").keyup(function(){
+            var page = "http://localhost:8001/online_xuanke/hello/ajax";
+           // var value = $(this).val();
+            $.ajax({
+                url: page,
+               // data:{"name":value},
+                success: function(result){
+                    $("#checkResult").html(result);
+                }
+            });
+        });
+   // });
+</script>
